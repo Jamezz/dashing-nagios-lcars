@@ -1,0 +1,28 @@
+<audio id="redalertaudio" src="http://thresher.vanu-sovereignty.com/soundz/red_short.wav" preload="auto"></audio>
+<audio id="yellowalertaudio" src="http://thresher.vanu-sovereignty.com/soundz/alert21.mp3" preload="auto"></audio>
+<audio id="restoredalertaudio" src="http://thresher.vanu-sovereignty.com/soundz/helm_engage_clean.mp3" preload="auto"></audio>
+
+<div class="Table">
+<h1 class="title" data-bind="title"></h1>
+	<div class="Heading">
+		<div style="width:10%; color:black" class="Cell ra_grey1">Host</div>
+		<div style="width:20%; color:black" class="Cell ra_grey1">Service</div>
+		<div style="width:10%; color:black" class="Cell ra_grey1">Status</div>
+		<div style="width:40%; color:black" class="Cell ra_grey1">Extended Info</div>
+		<div style="width:15%; color:black" class="Cell ra_grey1">Duration</div>
+	</div>
+	<div class="Row" data-foreach-item="criticals_details">
+		<div style="width:10%; color:black" class="Cell stdcolor1" data-bind="item.host"></div>
+		<div style="width:20%; color:black" class="Cell stdcolor1" data-bind="item.service"></div>
+		<div style="width:10%; color:black" class="Cell stdcolor1" data-bind="item.status"></div>
+		<div style="width:40%; color:black" class="Cell stdcolor1" data-bind="item.extended_info"></div>
+		<div style="width:15%; color:black" class="Cell stdcolor1" data-bind="item.duration"></div>
+	</div>
+	<div class="Row" data-foreach-item="warnings_details">
+		<div style="width:10%; color:black" class="Cell stdcolor1" data-bind="item.host"></div>
+		<div style="width:20%; color:black" class="Cell stdcolor1" data-bind="item.service"></div>
+		<div style="width:10%; color:black" class="Cell stdcolor1" data-bind="item.status"></div>
+		<div style="width:40%; color:black" class="Cell stdcolor1" data-bind="item.extended_info"></div>
+		<div style="width:15%; color:black" class="Cell stdcolor1" data-bind="item.duration"></div>
+	</div>
+</div>

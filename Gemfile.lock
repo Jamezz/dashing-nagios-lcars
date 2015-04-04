@@ -1,0 +1,136 @@
+GIT
+  remote: https://github.com/railsmachine/nagiosharder.git
+  revision: 827b774a2cfd7692b1b29717b9a8c1528e16acaf
+  specs:
+    nagiosharder (0.5.0)
+      activesupport
+      hashie (~> 1.2.0)
+      httparty
+      i18n
+      nokogiri
+      rest-client
+      terminal-table
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.2.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    addressable (2.3.8)
+    backports (3.6.4)
+    buftok (0.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.9.1)
+    daemons (1.2.2)
+    dashing (1.3.4)
+      coffee-script (~> 2.2.0)
+      execjs (~> 1.4.0)
+      rack (~> 1.5.2)
+      rufus-scheduler (~> 2.0.24)
+      sass (~> 3.2.12)
+      sinatra (~> 1.4.4)
+      sinatra-contrib (~> 1.4.2)
+      sprockets (~> 2.10.1)
+      thin (~> 1.6.1)
+      thor (~> 0.18.1)
+    domain_name (0.5.23)
+      unf (>= 0.0.5, < 1.0.0)
+    equalizer (0.0.11)
+    eventmachine (1.0.7)
+    execjs (1.4.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.8-x86-mingw32)
+    hashie (1.2.0)
+    hike (1.2.3)
+    http (0.6.4)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    http_parser.rb (0.6.0)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    i18n (0.7.0)
+    json (1.8.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    mime-types (2.4.3)
+    mini_portile (0.6.2)
+    minitest (5.5.1)
+    multi_json (1.11.0)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    naught (1.0.0)
+    netrc (0.10.3)
+    nokogiri (1.6.6.2-x86-mingw32)
+      mini_portile (~> 0.6.0)
+    rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rest-client (1.8.0-x86-mingw32)
+      ffi (~> 1.9)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rufus-scheduler (2.0.24)
+      tzinfo (>= 0.3.22)
+    sass (3.2.19)
+    simple_oauth (0.3.1)
+    sinatra (1.4.6)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+    sprockets (2.10.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    terminal-table (1.4.5)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
+    thor (0.18.1)
+    thread_safe (0.3.5)
+    tilt (1.4.1)
+    twitter (5.14.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.9)
+      faraday (~> 0.9.0)
+      http (~> 0.6.0)
+      http_parser.rb (~> 0.6.0)
+      json (~> 1.8)
+      memoizable (~> 0.4.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6-x86-mingw32)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  dashing
+  execjs (= 1.4.0)
+  nagiosharder!
+  twitter (>= 5.9.0)
