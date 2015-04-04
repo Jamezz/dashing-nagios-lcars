@@ -3,6 +3,7 @@ class Dashing.Nagdetails extends Dashing.Widget
   ready: ->
     # This is fired when the widget is done being rendered
     prepGlobals()
+    $('#nagiosDetailsTable').hide();
 	
 
   onData: (data) ->
@@ -32,6 +33,8 @@ class Dashing.Nagdetails extends Dashing.Widget
 	  
 	function playYellowAlert(){
   	console.log("Yellow alert!");
+	$('#federationLogo').hide();
+	$('#nagiosDetailsTable').show();
 	audio = document.getElementById('yellowalertaudio');
 	if (audio !== null && window.yellowAlertAudioPlayed === false && window.redAlertAudioPlayed === false){
 	  audio.play();
@@ -40,6 +43,8 @@ class Dashing.Nagdetails extends Dashing.Widget
 	}
 	function playRedAlert(){
   	console.log("Red alert!");
+	$('#federationLogo').hide();
+	$('#nagiosDetailsTable').show();
 	$('.alert_text').addClass('ra_redText5');
 	for(i = 1;i <= 5; i++){
 	   replaceColorClass('stdcolor'+i.toString(), 'ra_red'+i.toString());
@@ -55,6 +60,8 @@ class Dashing.Nagdetails extends Dashing.Widget
 	function resetAlertStatus(){
 	  console.log("Resetting alert status.");
 	  $('.alert_text').removeClass('ra_redText5');
+	  $('#nagiosDetailsTable').hide();
+	  $('#federationLogo').show();
 	  for(i = 1;i <= 5; i++){
 	   replaceColorClass('ra_red'+i.toString(), 'stdcolor'+i.toString());
 	}
