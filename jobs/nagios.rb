@@ -13,17 +13,26 @@ SCHEDULER.every '15s' do
     critical_count = 0
 	criticals_list = []
     warning_count = 0
-	warnings_list = []
+  warnings_list = []
     unacked.each do |alert|
-	  #alertString = alert["host"] + "-" + alert["service"] + "-" +alert["status"]
-      if alert["status"].eql? "CRITICAL"
-	    criticals_list.push(alert)
+    if alert["status"].eql? "CRITICAL"
+      split = alert["attempts"].split("/")
+      currentAttempt = Integer(split[0])
+      maxAttempts = Integer(split[1])
+      if (currentAttempt>=maxAttempts)
+        criticals_list.push(alert)
         critical_count += 1
-      elsif alert["status"].eql? "WARNING"
-	    warnings_list.push(alert)
+      end
+    elsif alert["status"].eql? "WARNING"
+      split = alert["attempts"].split("/")
+      currentAttempt = Integer(split[0])
+      maxAttempts = Integer(split[1])
+      if (currentAttempt>=maxAttempts)
+        warnings_list.push(alert)
         warning_count += 1
       end
     end
+  end
   
     status = critical_count > 0 ? "red" : (warning_count > 0 ? "yellow" : "green")
 
